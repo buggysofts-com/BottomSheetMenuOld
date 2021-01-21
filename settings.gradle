@@ -1,0 +1,3 @@
+include ':BottomSheetMenu'
+include ':app'
+rootProject.name = "BottomSheetMenuExample"
