@@ -22,12 +22,12 @@ public class AttributeResolver {
 
     public int getColor(int attrId) {
         theme.resolveAttribute(attrId, typedValue, true);
-        return typedValue.data;
+        return ContextCompat.getColor(context, typedValue.resourceId);
     }
 
     public String getColorInHex(int attrId) {
         theme.resolveAttribute(attrId, typedValue, true);
-        int intColor = typedValue.data;
+        int intColor = ContextCompat.getColor(context, typedValue.resourceId);
         return String.format("#%06X", (0xFFFFFF & intColor));
     }
 
